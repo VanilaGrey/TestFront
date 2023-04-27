@@ -1,0 +1,72 @@
+.nav {
+	display: flex;
+	justify-content: center;
+	padding: 4px;
+	border: 1*$px solid $color-light-grey;
+}
+
+.nav__list {
+	display: flex;
+	gap: 14*$px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+
+.nav__item {
+	float: left;
+}
+
+.nav__link {
+	display: block;
+	padding: 16*$px;
+	font-weight: 500;
+	font-size: 16*$px;
+	line-height: 16*$px;
+	text-decoration: none;
+	text-align: center;
+	color: $color-black;
+}
+
+.nav__link:hover {
+	background-color: $color-light-grey;
+}
+
+/* Скрытие подменю */
+.nav__list-under {
+	position: absolute;
+	z-index: 1;
+	display: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Показ подменю при наведении на вкладку */
+.nav__item:hover > .nav__list-under {
+	display: block;
+}
+
+.nav__item-under {
+	float: none;
+	text-align: left;
+	color: $color-black;
+	background-color: $color-white;
+	border-radius: 0;
+}
+
+/* Структура подменю */
+.nav__link-under {
+	display: block;
+	padding: 5*$px 43*$px;
+	text-decoration: none;
+	color: $color-black;
+	background-color: $color-white;
+	border-bottom: 1*$px solid $color-light-grey;
+}
+
+.nav__link-under:hover {
+	color: $color-light-grey;
+	box-shadow: 0 4*$px 4*$px 0 $color-grey;
+}

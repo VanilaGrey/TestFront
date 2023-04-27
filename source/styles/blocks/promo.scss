@@ -1,0 +1,13 @@
+.promo {
+	margin: 0 21*$px;
+	padding: 48*$px 0;
+}
+
+.promo__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	gap: 40*$px;
+}

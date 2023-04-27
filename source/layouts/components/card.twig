@@ -1,0 +1,14 @@
+<article class="card">
+	{% include 'picture.twig' with image %}
+	<p class="card__mark">{{ mark }}</p>
+	<p class="card__heading">{{ heading }}</p>
+	<div class="card__wrapper">
+		<p class="card__author">{{ author }}</p>
+		<time class="card__date" datetime="{{ datetime.date }}">{{datetime.author}}
+			{{ datetime.day }}
+			{{ datetime.month }}
+			{{ datetime.year }}</time>
+		<p class="card__views">{{ views }}</p>
+	</div>
+	<p class="card__description">{{ description }}</p>
+</article>

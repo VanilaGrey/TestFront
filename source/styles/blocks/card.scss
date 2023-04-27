@@ -1,0 +1,51 @@
+.card {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.card__mark {
+	margin: 15*$px 0;
+	font-weight: 700;
+	font-size: 13 * $px;
+	line-height: 13 * $px;
+	color: $color-red;
+}
+
+.card__heading {
+	margin: 0 0 18*$px;
+	font-weight: 700;
+	font-size: 24*$px;
+	line-height: 30*$px;
+}
+
+.card__wrapper {
+	display: flex;
+}
+
+.card__author {
+	margin: 0;
+	font-weight: 500;
+	font-size: 12*$px;
+	line-height: 12*$px;
+}
+
+.card__date {
+	font-weight: 400;
+	font-size: 12*$px;
+	line-height: 12*$px;
+	color: $color-middle-grey;
+}
+
+.card__views {
+	margin: 0;
+	font-weight: 400;
+	font-size: 12*$px;
+	line-height: 12*$px;
+	color: $color-middle-grey;
+}
+
+.card__description {
+	margin: 17*$px 0 16*$px;
+	color: $color-very-light-grey;
+}

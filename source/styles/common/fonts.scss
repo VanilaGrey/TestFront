@@ -2,8 +2,8 @@
 	@font-face {
 		font-weight: $weight;
 		font-style: normal;
-		font-family: "PT Sans";
+		font-family: "Roboto";
 		font-display: swap;
-		src: url("../fonts/ptsans-#{$weight}.woff2") format("woff2");
+		src: url("../fonts/Roboto-#{$weight}.woff2") format("woff2");
 	}
 }

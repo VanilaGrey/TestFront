@@ -126,6 +126,7 @@
 				"SwitchCase": 1
 			}
 		],
+		"max-params": "off",
 		"max-statements": "off",
 		"multiline-comment-style": [
 			"error",
