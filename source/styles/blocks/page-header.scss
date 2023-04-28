@@ -5,10 +5,10 @@
 
 .page-header__search {
 	position: absolute;
-	top: 33* $px;
-	right: 380* $px;
-	width: 16* $px;
-	height: 16* $px;
+	top: 33 * $px;
+	right: 380 * $px;
+	width: 16 * $px;
+	height: 16 * $px;
 	background-color: transparent;
 	border: none;
 }
@@ -16,11 +16,11 @@
 .page-header__search::before {
 	content: "";
 	position: absolute;
-	top: -1* $px;
-	right: -2* $px;
+	top: -1 * $px;
+	right: -2 * $px;
 	display: block;
-	width: 19* $px;
-	height: 20* $px;
+	width: 19 * $px;
+	height: 20 * $px;
 	background-color: $color-black;
 	cursor: pointer;
 
