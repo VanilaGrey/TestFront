@@ -1,13 +1,13 @@
 .nav {
 	display: flex;
 	justify-content: center;
-	padding: 4px;
-	border: 1*$px solid $color-light-grey;
+	padding: 4* $px;
+	border: 1 * $px solid $color-light-grey;
 }
 
 .nav__list {
 	display: flex;
-	gap: 14*$px;
+	gap: 14 * $px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -19,14 +19,31 @@
 }
 
 .nav__link {
+	position: relative;
 	display: block;
-	padding: 16*$px;
+	padding: 16 * $px;
 	font-weight: 500;
-	font-size: 16*$px;
-	line-height: 16*$px;
+	font-size: 16 * $px;
+	line-height: 16 * $px;
 	text-decoration: none;
 	text-align: center;
 	color: $color-black;
+}
+
+.nav__link::before {
+	content: "";
+	position: absolute;
+	top: 21* $px;
+	right: 1* $px;
+	width: 11* $px;
+	height: 8* $px;
+	background-color: $color-black;
+
+	@include graphic-icon("icon-arrow");
+}
+
+.nav__link:last-child::before {
+	content: none;
 }
 
 .nav__link:hover {
@@ -39,7 +56,7 @@
 	z-index: 1;
 	display: none;
 	margin: 0;
-	padding: 0;
+	padding: 17* $px 0;
 	list-style: none;
 }
 
@@ -50,6 +67,7 @@
 
 .nav__item-under {
 	float: none;
+	width: 192* $px;
 	text-align: left;
 	color: $color-black;
 	background-color: $color-white;
@@ -59,14 +77,17 @@
 /* Структура подменю */
 .nav__link-under {
 	display: block;
-	padding: 5*$px 43*$px;
+	padding: 8* $px 73* $px 8* $px 35* $px;
+	font-weight: 400;
+	font-size: 13* $px;
+	line-height: 13* $px;
 	text-decoration: none;
 	color: $color-black;
 	background-color: $color-white;
-	border-bottom: 1*$px solid $color-light-grey;
+	border-bottom: 1 * $px solid $color-light-grey;
 }
 
 .nav__link-under:hover {
 	color: $color-light-grey;
-	box-shadow: 0 4*$px 4*$px 0 $color-grey;
+	box-shadow: 0 4 * $px 4 * $px 0 $color-grey;
 }

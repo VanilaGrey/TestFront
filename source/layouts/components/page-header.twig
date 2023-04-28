@@ -1,6 +1,9 @@
-<div class="page-header" >
+<div class="page-header">
 	<header class="page-header__container container">
 		{% include 'logo.twig' with { bemMix: 'page-header__logo' } %}
+		<button class="page-header__search" type="button">
+			<span class="visually-hidden">Поиск</span>
+		</button>
 	</header>
 
 	{% include 'nav.twig' %}

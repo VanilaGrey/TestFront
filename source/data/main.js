@@ -9,27 +9,49 @@ export default ({ error, pageName, status }) => ({
 	description: 'Test Front',
 	getImages(filename, additions = {}, useTablet = true, useMobile = true) {
 		const image = Object.assign(additions, {
-		  default: `images/${filename}.jpg`,
-		  default2x: `images/${filename}@2x.jpg`,
-		  webp: `images/${filename}.webp`,
-		  webp2x: `images/${filename}@2x.webp`,
+			default: `images/${filename}.jpg`,
+			default2x: `images/${filename}@2x.jpg`,
+			webp: `images/${filename}.webp`,
+			webp2x: `images/${filename}@2x.webp`
 		});
 
 		if (useTablet) {
-		  image.webpTablet = `images/${filename}-tablet.webp`;
-		  image.webpTablet2x = `images/${filename}-tablet@2x.webp`;
+			image.webpTablet = `images/${filename}-tablet.webp`;
+			image.webpTablet2x = `images/${filename}-tablet@2x.webp`;
 		}
 
 		if (useMobile) {
-		  image.webpMobile = `images/${filename}-mobile.webp`;
-		  image.webpMobile2x = `images/${filename}-mobile@2x.webp`;
+			image.webpMobile = `images/${filename}-mobile.webp`;
+			image.webpMobile2x = `images/${filename}-mobile@2x.webp`;
 		}
 
 		return image;
-	  },
+	},
 
 	navLinks: [
 		{
+			links: [
+				{
+					title: 'Demos Header',
+					url: '#!'
+				},
+				{
+					title: 'Demos Layout',
+					url: '#!'
+				},
+				{
+					title: 'Share Buttons',
+					url: '#!'
+				},
+				{
+					title: 'Gallery Demos',
+					url: '#!'
+				},
+				{
+					title: 'Video Demos',
+					url: '#!'
+				}
+			],
 			title: 'Demos',
 			url: '#!'
 		},
@@ -60,14 +82,80 @@ export default ({ error, pageName, status }) => ({
 			url: '#!'
 		},
 		{
+			links: [
+				{
+					title: 'Features Header',
+					url: '#!'
+				},
+				{
+					title: 'Features Layout',
+					url: '#!'
+				},
+				{
+					title: 'Share Buttons',
+					url: '#!'
+				},
+				{
+					title: 'Gallery Features',
+					url: '#!'
+				},
+				{
+					title: 'Video Features',
+					url: '#!'
+				}
+			],
 			title: 'Features',
 			url: '#!'
 		},
 		{
+			links: [
+				{
+					title: 'Categories Header',
+					url: '#!'
+				},
+				{
+					title: 'Categories Layout',
+					url: '#!'
+				},
+				{
+					title: 'Share Buttons',
+					url: '#!'
+				},
+				{
+					title: 'Gallery Categories',
+					url: '#!'
+				},
+				{
+					title: 'Video Categories',
+					url: '#!'
+				}
+			],
 			title: 'Categories',
 			url: '#!'
 		},
 		{
+			links: [
+				{
+					title: 'Shop Header',
+					url: '#!'
+				},
+				{
+					title: 'Shop Layout',
+					url: '#!'
+				},
+				{
+					title: 'Share Buttons',
+					url: '#!'
+				},
+				{
+					title: 'Gallery Shop',
+					url: '#!'
+				},
+				{
+					title: 'Video Shop',
+					url: '#!'
+				}
+			],
 			title: 'Shop',
 			url: '#!'
 		},
@@ -77,6 +165,6 @@ export default ({ error, pageName, status }) => ({
 		}
 	],
 
-	pixelperfect: JSON.stringify({ breakpoints: [320, 1200], ext: 'webp' }),
-	projectName: 'Test Front',
+	pixelperfect: JSON.stringify({ breakpoints: [320, 1920], ext: 'webp' }),
+	projectName: 'Test Front'
 });

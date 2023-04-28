@@ -1,6 +1,8 @@
 .promo {
-	margin: 0 21*$px;
-	padding: 48*$px 0;
+	box-sizing: border-box;
+	max-width: 1600* $px;
+	margin: 0 auto;
+	padding: 48* $px 220* $px;
 }
 
 .promo__list {
@@ -9,5 +11,5 @@
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	gap: 40*$px;
+	gap: 40 * $px;
 }
