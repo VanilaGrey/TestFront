@@ -7,12 +7,12 @@
 		<meta name="description" content="{{ description }}">
 		<link rel="stylesheet" href="{{ rootPath }}styles/main.css{{ version }}">
 
-		{% for weight in [400, 700] %}
-			<link rel="preload" href="fonts/ptsans-{{ weight }}.woff2" as="font" crossorigin="anonymous">
-		{% endfor %}
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<div class="page">
+		<div class="page page-container">
 			{% block header %}
 				<h1 class="visually-hidden">{{ projectName }}</h1>
 

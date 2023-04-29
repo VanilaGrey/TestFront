@@ -1,20 +1,16 @@
-<div class="nav">
-	<ul class="nav__list" {{ bemMix }}>
-		{% for navLink in navLinks %}
-			<li class="nav__item">
-				<a class="nav__link" href="{{ navLink.url }}">{{ navLink.title }}</a>
-				{% if navLink.links is not empty %}
-					<ul class="nav__list-under">
-						{% for link in navLink.links %}
-							<li class="nav__item-inder">
-								<div class="nav__link-wrapper">
-									<a class="nav__link-under" href="{{ link.url }}">{{ link.title }}</a>
-								</div>
-							</li>
-						{% endfor %}
-					</ul>
-				{% endif %}
-			</li>
-		{% endfor %}
-	</ul>
-</div>
+<ul class="nav__list" {{ bemMix }}>
+	{% for navLink in navLinks %}
+		<li class="nav__item">
+			<a class="nav__link" href="{{ navLink.url }}">{{ navLink.title }}</a>
+			{% if navLink.links is not empty %}
+				<ul class="nav__list-under">
+					{% for link in navLink.links %}
+						<li class="nav__item-under">
+							<a class="nav__link-under" href="{{ link.url }}">{{ link.title }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</li>
+	{% endfor %}
+</ul>

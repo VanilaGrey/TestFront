@@ -1,23 +1,29 @@
 .page-header {
-	position: relative;
 	padding: 19 * $px 0 0;
+}
+
+.page-header__wrapper {
+	display: flex;
+	flex-direction: column;
 }
 
 .page-header__search {
 	position: absolute;
-	top: 33 * $px;
-	right: 380 * $px;
-	width: 16 * $px;
-	height: 16 * $px;
+	top: 24 * $px;
+	right: 368 * $px;
+	width: 33 * $px;
+	height: 35 * $px;
 	background-color: transparent;
 	border: none;
+
+	@include media-mobile {
+		top: 27 * $px;
+		left: 335 * $px;
+	}
 }
 
 .page-header__search::before {
 	content: "";
-	position: absolute;
-	top: -1 * $px;
-	right: -2 * $px;
 	display: block;
 	width: 19 * $px;
 	height: 20 * $px;
@@ -27,9 +33,57 @@
 	@include graphic-icon("icon-search");
 }
 
-.page-header__container {
-	display: flex;
-	margin-bottom: 16 * $px;
-	padding: 10 * $px;
-	text-align: center;
+.page-header__toggler {
+	display: none;
+	padding: 0;
+	color: inherit;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 31 * $px;
+		left: 19 * $px;
+		width: 27 * $px;
+		height: 27 * $px;
+		background-color: $color-black;
+
+		@include graphic-icon("icon-burger");
+	}
+
+	@include media-mobile {
+		display: flex;
+	}
+}
+
+.page-header__nav {
+	@include media-mobile {
+		display: none;
+	}
+}
+
+.page-header.is-active {
+	position: absolute;
+	top: 0;
+	right: 55 * $px;
+	bottom: 0;
+	width: calc(100% - 55 * $px);
+
+	.page-header__toggler::before {
+		right: 18px;
+		width: 22px;
+
+		@include graphic-icon("icon-close");
+	}
+
+	@include media-mobile {
+		color: $color-black;
+		background-color: $color-white;
+
+		.page-header__nav {
+			display: block;
+		}
+	}
 }

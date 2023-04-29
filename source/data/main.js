@@ -165,6 +165,6 @@ export default ({ error, pageName, status }) => ({
 		}
 	],
 
-	pixelperfect: JSON.stringify({ breakpoints: [320, 1920], ext: 'webp' }),
+	pixelperfect: JSON.stringify({ breakpoints: [375, 1920], ext: 'webp' }),
 	projectName: 'Test Front'
 });

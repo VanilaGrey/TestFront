@@ -1,15 +1,27 @@
 .promo {
-	box-sizing: border-box;
 	max-width: 1600 * $px;
 	margin: 0 auto;
 	padding: 48 * $px 220 * $px;
+
+	@include media-mobile {
+		max-width: 767 * $px;
+		margin: 0 auto;
+		padding: 25 * $px 20 * $px;
+	}
 }
 
 .promo__list {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	margin: 0;
-	padding: 0;
+	margin: 0 100 * $px;
+	padding: 0 60 * $px;
 	list-style-type: none;
 	gap: 40 * $px;
+
+	@include media-mobile {
+		grid-template-columns: 1fr;
+		gap: 22* $px;
+		margin: 0;
+		padding: 0;
+	}
 }

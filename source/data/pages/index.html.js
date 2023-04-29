@@ -5,7 +5,7 @@ export default ({ getImages }) => ({
 			author: 'Niek Bove',
 			datetime: {
 				date: '2018-04-08',
-				day: 8,
+				day: "8,",
 				month: 'April',
 				year: 2018
 			},
@@ -18,7 +18,7 @@ export default ({ getImages }) => ({
 			author: 'Niek Bove',
 			datetime: {
 				date: '2018-04-08',
-				day: 8,
+				day: "8,",
 				month: 'April',
 				year: 2018
 			},
@@ -31,7 +31,7 @@ export default ({ getImages }) => ({
 			author: 'Niek Bove',
 			datetime: {
 				date: '2018-04-08',
-				day: 8,
+				day: "8,",
 				month: 'April',
 				year: 2018
 			},
@@ -44,7 +44,7 @@ export default ({ getImages }) => ({
 			author: 'Niek Bove',
 			datetime: {
 				date: '2018-04-08',
-				day: 8,
+				day: "8,",
 				month: 'April',
 				year: 2018
 			},
@@ -57,7 +57,7 @@ export default ({ getImages }) => ({
 			author: 'Niek Bove',
 			datetime: {
 				date: '2018-04-08',
-				day: 8,
+				day: "8,",
 				month: 'April',
 				year: 2018
 			},
@@ -70,7 +70,7 @@ export default ({ getImages }) => ({
 			author: 'Niek Bove',
 			datetime: {
 				date: '2018-04-08',
-				day: 8,
+				day: "8,",
 				month: 'April',
 				year: 2018
 			},
@@ -83,7 +83,7 @@ export default ({ getImages }) => ({
 			author: 'Niek Bove',
 			datetime: {
 				date: '2018-04-08',
-				day: 8,
+				day: "8,",
 				month: 'April',
 				year: 2018
 			},
@@ -120,6 +120,6 @@ export default ({ getImages }) => ({
 		}
 	].map((item, i) => ({
 		...item,
-		image: getImages(`foto-${i}`, { alt: `${item.heading}.` }, false, false)
+		image: getImages(`foto-${i}`, { alt: `${item.heading}.` }, false, true)
 	}))
 });

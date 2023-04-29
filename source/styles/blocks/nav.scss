@@ -3,15 +3,24 @@
 	justify-content: center;
 	padding: 4 * $px;
 	border: 1 * $px solid $color-light-grey;
+
+	@include media-mobile {
+		justify-content: start;
+	}
 }
 
 .nav__list {
 	display: flex;
 	gap: 14 * $px;
+	justify-content: center;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	overflow: hidden;
+
+	@include media-mobile {
+		flex-direction: column;
+	}
 }
 
 .nav__item {
@@ -28,6 +37,8 @@
 	text-decoration: none;
 	text-align: center;
 	color: $color-black;
+
+	@include interactive-defaults;
 }
 
 .nav__link::before {
@@ -44,10 +55,6 @@
 
 .nav__link:last-child::before {
 	content: none;
-}
-
-.nav__link:hover {
-	background-color: $color-light-grey;
 }
 
 /* Скрытие подменю */
@@ -67,17 +74,22 @@
 
 .nav__item-under {
 	float: none;
-	width: 192 * $px;
+	padding: 0 23 * $px 0 29 * $px;
 	text-align: left;
 	color: $color-black;
 	background-color: $color-white;
 	border-radius: 0;
 }
 
+.nav__item-under:last-of-type {
+	padding-bottom: 11 * $px;
+}
+
 /* Структура подменю */
 .nav__link-under {
+	position: relative;
 	display: block;
-	padding: 8 * $px 73 * $px 8 * $px 35 * $px;
+	padding: 8 * $px 51 * $px 8 * $px 6 * $px;
 	font-weight: 400;
 	font-size: 13 * $px;
 	line-height: 13 * $px;
@@ -87,13 +99,17 @@
 	border-bottom: 1 * $px solid $color-light-grey;
 }
 
+.nav__item-under:last-child .nav__link-under {
+	border-bottom: none;
+}
+
 .nav__link-under::before {
 	content: "";
 	position: absolute;
-	top: 28* $px;
-	right: 18* $px;
-	width: 8* $px;
-	height: 9* $px;
+	top: 11 * $px;
+	right: -4 * $px;
+	width: 8 * $px;
+	height: 9 * $px;
 	background-color: $color-black;
 	transform: rotate(-90deg);
 
@@ -101,6 +117,8 @@
 }
 
 .nav__link-under:hover {
-	color: $color-light-grey;
-	box-shadow: 0 4 * $px 4 * $px 0 $color-grey;
+	margin-left: 8 * $px;
+	padding-right: 43 * $px;
+	color: $color-grey;
+	text-shadow: 0 4 * $px 4 * $px rgba(0, 0, 0, 0.25);
 }

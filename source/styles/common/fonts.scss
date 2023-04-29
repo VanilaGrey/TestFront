@@ -1,9 +1,0 @@
-@each $weight in 400, 700 {
-	@font-face {
-		font-weight: $weight;
-		font-style: normal;
-		font-family: "Roboto";
-		font-display: swap;
-		src: url("../fonts/Roboto-#{$weight}.woff2") format("woff2");
-	}
-}
