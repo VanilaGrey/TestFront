@@ -1,11 +1,8 @@
 .logo {
-	margin: 0 auto;
-	padding: 7* $px 0 27* $px;
+	padding: 7 * $px 0 27 * $px;
 
 	@include media-mobile {
-		display: flex;
-		width: 163* $px;
-		margin: 0 0 0 19* $px;
-		padding: 13* $px 0;
+		width: 163 * $px;
+		padding: 13 * $px 0;
 	}
 }

@@ -1,8 +1,33 @@
 .page-header {
-	padding: 19 * $px 0 0;
+	min-height: 49px;
+	padding: 20 * $px 0 0;
+	transition: transform 0.3s ease-in-out;
 }
 
-.page-header__wrapper {
+.page-header__fixed {
+	position: sticky;
+	top: -81px;
+	background-color: $color-white;
+	transition: transform 0.3s ease-in-out;
+
+	&--sticky {
+	  position: fixed;
+	  z-index: 999;
+	  width: 100%;
+	  transform: translateY(-100%);
+	}
+
+	&--hidden {
+	  top: -100px;
+	  transform: translateY(0);
+	}
+  }
+
+.page-header__logo {
+	margin: 0 auto;
+}
+
+.page-header__inner {
 	display: flex;
 	flex-direction: column;
 }
@@ -10,15 +35,15 @@
 .page-header__search {
 	position: absolute;
 	top: 24 * $px;
-	right: 368 * $px;
+	right: calc(50% - 592 * $px);
 	width: 33 * $px;
 	height: 35 * $px;
 	background-color: transparent;
 	border: none;
 
-	@include media-mobile {
-		top: 27 * $px;
-		left: 335 * $px;
+	@include media-tablet-mobile {
+		top: 24 * $px;
+		right: 8 * $px;
 	}
 }
 
@@ -34,6 +59,9 @@
 }
 
 .page-header__toggler {
+	position: absolute;
+	top: 31 * $px;
+	left: 19 * $px;
 	display: none;
 	padding: 0;
 	color: inherit;
@@ -43,9 +71,6 @@
 
 	&::before {
 		content: "";
-		position: absolute;
-		top: 31 * $px;
-		left: 19 * $px;
 		width: 27 * $px;
 		height: 27 * $px;
 		background-color: $color-black;
@@ -64,26 +89,46 @@
 	}
 }
 
-.page-header.is-active {
+.page-header__wrapper.is-active {
 	position: absolute;
 	top: 0;
-	right: 55 * $px;
+	right: 0;
 	bottom: 0;
-	width: calc(100% - 55 * $px);
+	left: 0;
 
-	.page-header__toggler::before {
+	.page-header__toggler {
 		right: 18px;
-		width: 22px;
+		left: auto;
 
-		@include graphic-icon("icon-close");
+		&::before {
+			width: 22 * $px;
+
+			@include graphic-icon("icon-close");
+		}
 	}
 
 	@include media-mobile {
+		z-index: 1;
 		color: $color-black;
-		background-color: $color-white;
+		background-color: $color-very-light-grey;
+
+		.page-header__logo {
+			display: block;
+			margin: 19px 19px 11px;
+		}
 
 		.page-header__nav {
 			display: block;
+			border-top: 1 * $px solid $color-light-grey;
+		}
+
+		.page-header__inner {
+			position: absolute;
+			top: 0;
+			right: 55 * $px;
+			bottom: 0;
+			left: 0;
+			background-color: $color-white;
 		}
 	}
 }

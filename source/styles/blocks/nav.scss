@@ -1,11 +1,15 @@
 .nav {
+	z-index: 1;
 	display: flex;
 	justify-content: center;
-	padding: 4 * $px;
+	padding: 3 * $px;
 	border: 1 * $px solid $color-light-grey;
 
 	@include media-mobile {
+		position: static;
 		justify-content: start;
+		padding: 0;
+		border: none;
 	}
 }
 
@@ -20,11 +24,19 @@
 
 	@include media-mobile {
 		flex-direction: column;
+		margin: 29px 24px 0 20px;
+		overflow: visible;
+		gap: 7px;
 	}
 }
 
 .nav__item {
 	float: left;
+
+	@include media-mobile {
+		float: none;
+		width: 100%;
+	}
 }
 
 .nav__link {
@@ -39,6 +51,23 @@
 	color: $color-black;
 
 	@include interactive-defaults;
+
+	@include media-mobile {
+		display: flex;
+		padding: 5px 7px 20px 0;
+	}
+}
+
+.nav__item:not(:first-child) .nav__link {
+	@include media-mobile {
+		padding: 8px 7px 17px 0;
+	}
+}
+
+.nav__item:not(:last-child) .nav__link {
+	@include media-mobile {
+		border-bottom: 1 * $px solid $color-light-grey;
+	}
 }
 
 .nav__link::before {
@@ -79,6 +108,10 @@
 	color: $color-black;
 	background-color: $color-white;
 	border-radius: 0;
+
+	@include media-mobile {
+		padding: 0;
+	}
 }
 
 .nav__item-under:last-of-type {
@@ -97,6 +130,11 @@
 	color: $color-black;
 	background-color: $color-white;
 	border-bottom: 1 * $px solid $color-light-grey;
+
+	@include media-mobile {
+		font-size: 14 * $px;
+		line-height: 14 * $px;
+	}
 }
 
 .nav__item-under:last-child .nav__link-under {

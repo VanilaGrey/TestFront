@@ -1,27 +1,25 @@
-.promo {
-	max-width: 1600 * $px;
-	margin: 0 auto;
-	padding: 48 * $px 220 * $px;
-
-	@include media-mobile {
-		max-width: 767 * $px;
-		margin: 0 auto;
-		padding: 25 * $px 20 * $px;
-	}
-}
-
 .promo__list {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	margin: 0 100 * $px;
-	padding: 0 60 * $px;
+	max-width: 1160 * $px;
+	margin: 0 auto;
+	padding: 49 * $px 20 * $px;
 	list-style-type: none;
 	gap: 40 * $px;
 
+	@include media-tablet-mobile {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40 * $px;
+		max-width: 760px;
+		margin: 0 auto;
+		padding: 25 * $px 20 * $px;
+	}
+
 	@include media-mobile {
 		grid-template-columns: 1fr;
-		gap: 22* $px;
-		margin: 0;
-		padding: 0;
+		gap: 22 * $px;
+		max-width: 360px;
+		margin: 0 auto;
+		padding: 25 * $px 20 * $px;
 	}
 }

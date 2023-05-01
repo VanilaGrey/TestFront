@@ -1,12 +1,14 @@
 <header class="page-header page-header__container">
 	<div class="page-header__wrapper">
-		<button class="page-header__toggler" type="button" aria-controls="nav" aria-expanded="false">
-			<span class="visually-hidden">Переключить режим отображения меню.</span>
-		</button>
-		{% include 'logo.twig' with { bemMix: 'page-header__logo' } %}
-		<nav class="nav page-header__nav" id="nav">
-			{% include 'nav.twig' %}
-		</nav>
+		<div class="page-header__inner">
+			<button class="page-header__toggler" type="button" aria-controls="nav" aria-expanded="false">
+				<span class="visually-hidden">Переключить режим отображения меню.</span>
+			</button>
+			{% include 'logo.twig' with { bemMix: 'page-header__logo' } %}
+			<nav class="nav page-header__nav" id="nav">
+				{% include 'nav.twig' %}
+			</nav>
+		</div>
 	</div>
 	<button class="page-header__search" type="button">
 		<span class="visually-hidden">Поиск</span>
