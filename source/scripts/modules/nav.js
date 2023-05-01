@@ -2,7 +2,7 @@ const POSITION = 281;
 
 const initScrollNav = () => {
 	const nav = document.querySelector('.page-header');
-	if (window.pageYOffset  < POSITION) {
+	if (window.pageYOffset < POSITION) {
 		nav.classList.add('page-header__fixed');
 		nav.classList.remove('page-header__hidden');
 		document.body.classList.add('page-header__fixed');

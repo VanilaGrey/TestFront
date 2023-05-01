@@ -1,84 +1,79 @@
 .card {
+	max-width: 360* $px;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-}
 
-.card__mark {
-	margin: 16 * $px 0;
-	font-weight: 700;
-	font-size: 13 * $px;
-	line-height: 13 * $px;
-	color: $color-red;
+	&__mark {
+		margin: 16* $px 0;
+		font-weight: 700;
+		font-size: 13* $px;
+		line-height: 13* $px;
+		color: $color-red;
 
-	@include media-mobile {
-		margin: 16 * $px 0;
-	}
-}
-
-.card__heading {
-	margin: 0 0 16 * $px;
-	font-weight: 700;
-	font-size: 24 * $px;
-	line-height: 30 * $px;
-}
-
-.card__wrapper {
-	display: flex;
-}
-
-.card__author {
-	margin: 0;
-	font-weight: 500;
-	font-size: 12 * $px;
-	line-height: 12 * $px;
-}
-
-.card__date {
-	position: relative;
-	margin: 0 13 * $px;
-	font-weight: 400;
-	font-size: 12 * $px;
-	line-height: 12 * $px;
-	color: $color-middle-grey;
-
-	&::before {
-		content: "";
-		position: absolute;
-		top: 4 * $px;
-		left: -8 * $px;
-		display: block;
-		width: 3 * $px;
-		height: 3 * $px;
-		background-color: $color-dark-grey;
-
-		@include graphic-icon("icon-circle");
+		@include media-mobile {
+			margin: 16* $px 0;
+		}
 	}
 
-	&::after {
-		content: "";
-		position: absolute;
-		top: 4 * $px;
-		right: -8 * $px;
-		display: block;
-		width: 3 * $px;
-		height: 3 * $px;
-		background-color: $color-dark-grey;
-
-		@include graphic-icon("icon-circle");
+	&__heading {
+		margin: 0 0 16* $px;
+		font-weight: 700;
+		font-size: 24* $px;
+		line-height: 30* $px;
 	}
-}
 
-.card__views {
-	margin: 0;
-	font-weight: 400;
-	font-size: 12 * $px;
-	line-height: 12 * $px;
-	color: $color-middle-grey;
-}
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		margin-bottom: 16* $px;
+	}
 
-.card__description {
-	margin: 17 * $px 0 8 * $px;
-	font-weight: 400;
-	color: $color-very-light-grey;
+	&__author {
+		margin: 0;
+		font-weight: 500;
+		font-size: 12* $px;
+		line-height: 12* $px;
+	}
+
+	&__date {
+		margin: 0 13* $px;
+		font-weight: 400;
+		font-size: 12* $px;
+		line-height: 12* $px;
+		color: $color-middle-grey;
+
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			width: 3* $px;
+			height: 3* $px;
+			margin-top: 5* $px;
+			background-color: $color-middle-grey;
+			border-radius: 50%;
+		}
+
+		&::before {
+			margin-right: 8* $px;
+		}
+
+		&::after {
+			margin-left: 8* $px;
+		}
+	}
+
+	&__views {
+		margin: 0;
+		font-weight: 400;
+		font-size: 12* $px;
+		line-height: 12* $px;
+		color: $color-middle-grey;
+	}
+
+	&__description {
+		margin: 17* $px 0 8* $px;
+		font-weight: 400;
+		color: $color-very-light-grey;
+	}
 }

@@ -1,24 +1,21 @@
 .promo__list {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	display: flex;
+	flex-wrap: wrap;
 	max-width: 1160 * $px;
 	margin: 0 auto;
 	padding: 49 * $px 20 * $px;
+	gap: 40* $px;
 	list-style-type: none;
-	gap: 40 * $px;
 
 	@include media-tablet-mobile {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 40 * $px;
-		max-width: 760px;
+		max-width: 760* $px;
 		margin: 0 auto;
 		padding: 25 * $px 20 * $px;
+		gap: 8* $px;
 	}
 
 	@include media-mobile {
-		grid-template-columns: 1fr;
-		gap: 22 * $px;
-		max-width: 360px;
+		max-width: 360* $px;
 		margin: 0 auto;
 		padding: 25 * $px 20 * $px;
 	}
