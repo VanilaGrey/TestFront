@@ -4,18 +4,18 @@
 	max-width: 1160 * $px;
 	margin: 0 auto;
 	padding: 49 * $px 20 * $px;
-	gap: 40* $px;
+	gap: 40 * $px;
 	list-style-type: none;
 
 	@include media-tablet-mobile {
-		max-width: 760* $px;
+		max-width: 760 * $px;
 		margin: 0 auto;
 		padding: 25 * $px 20 * $px;
-		gap: 8* $px;
+		gap: 8 * $px;
 	}
 
 	@include media-mobile {
-		max-width: 360* $px;
+		max-width: 360 * $px;
 		margin: 0 auto;
 		padding: 25 * $px 20 * $px;
 	}

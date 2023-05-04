@@ -2,6 +2,7 @@ import '../common/utils/focus-lock.js';
 
 export default (headerElement) => {
 	const togglerElement = headerElement.querySelector('.page-header__toggler');
+	const navElement = document.querySelector('nav');
 
 	const keyCloseHandler = (evt) => {
 		if (evt.key.startsWith('Esc')) {
@@ -15,6 +16,7 @@ export default (headerElement) => {
 		document.addEventListener('keydown', keyCloseHandler);
 		document.documentElement.classList.add('scroll-lock');
 		headerElement.classList.add('is-active');
+		navElement.classList.add('is-active');
 	};
 
 	const closeHeader = () => {
@@ -23,6 +25,7 @@ export default (headerElement) => {
 		document.removeEventListener('keydown', keyCloseHandler);
 		document.documentElement.classList.remove('scroll-lock');
 		headerElement.classList.remove('is-active');
+		navElement.classList.remove('is-active');
 	};
 
 	document.addEventListener('click', (evt) => {

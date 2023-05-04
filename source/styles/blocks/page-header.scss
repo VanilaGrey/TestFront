@@ -1,34 +1,11 @@
 .page-header {
-	min-height: 49* $px;
-	padding: 20* $px 0 0;
+	min-height: 49 * $px;
+	padding: 22 * $px 0 0;
 	transition: transform 0.3s ease-in-out;
-}
-
-.page-header__fixed {
-	position: sticky;
-	top: -81* $px;
-	background-color: $color-white;
-	transition: transform 0.3s ease-in-out;
-
-	&--sticky {
-		position: fixed;
-		z-index: 999;
-		width: 100%;
-		transform: translateY(-100%);
-	}
-
-	&--hidden {
-		top: -100* $px;
-		transform: translateY(0);
-	}
-
-	@include media-mobile {
-		display: flex;
-		flex-direction: column;
-	}
 }
 
 .page-header__logo {
+	z-index: 1;
 	margin: 0 auto;
 }
 
@@ -40,24 +17,24 @@
 
 .page-header__search {
 	position: absolute;
-	top: 24* $px;
-	right: calc(50% - 592* $px);
-	width: 33* $px;
-	height: 35* $px;
+	top: 24 * $px;
+	right: calc(50% - 592 * $px);
+	width: 33 * $px;
+	height: 35 * $px;
 	background-color: transparent;
 	border: none;
 
 	@include media-tablet-mobile {
-		top: 24* $px;
-		right: 8* $px;
+		top: 24 * $px;
+		right: 8 * $px;
 	}
 }
 
 .page-header__search::before {
 	content: "";
 	display: block;
-	width: 19* $px;
-	height: 20* $px;
+	width: 19 * $px;
+	height: 20 * $px;
 	background-color: $color-black;
 	cursor: pointer;
 
@@ -66,8 +43,8 @@
 
 .page-header__toggler {
 	position: absolute;
-	top: 31* $px;
-	left: 19* $px;
+	top: 31 * $px;
+	left: 19 * $px;
 	display: none;
 	padding: 0;
 	color: inherit;
@@ -77,8 +54,8 @@
 
 	&::before {
 		content: "";
-		width: 27* $px;
-		height: 27* $px;
+		width: 27 * $px;
+		height: 27 * $px;
 		background-color: $color-black;
 
 		@include graphic-icon("icon-burger");
@@ -96,21 +73,23 @@
 }
 
 .page-header__wrapper.is-active {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1;
+	@include media-mobile {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
 
-	.page-header__toggler {
-		right: 18* $px;
-		left: auto;
+		.page-header__toggler {
+			right: 18 * $px;
+			left: auto;
 
-		&::before {
-			width: 22* $px;
+			&::before {
+				width: 22 * $px;
 
-			@include graphic-icon("icon-close");
+				@include graphic-icon("icon-close");
+			}
 		}
 	}
 
@@ -118,22 +97,24 @@
 		z-index: 1;
 		color: $color-black;
 		background-color: $color-white-06;
-		box-shadow: 0* $px 4* $px 4* $px rgba(0, 0, 0, 0.25);
+		box-shadow: 0 * $px 4 * $px 4 * $px rgba(0, 0, 0, 0.25);
 
 		.page-header__logo {
+			position: relative;
+			z-index: 1;
 			display: block;
-			margin: 19* $px 19* $px 11* $px;
+			margin: 19 * $px 19 * $px 11 * $px;
 		}
 
 		.page-header__nav {
 			display: block;
-			border-top: 1* $px solid $color-light-grey;
+			border-top: 1 * $px solid $color-light-grey;
 		}
 
 		.page-header__inner {
 			position: absolute;
 			top: 0;
-			right: 55* $px;
+			right: 55 * $px;
 			bottom: 0;
 			left: 0;
 			z-index: 1;

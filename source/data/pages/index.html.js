@@ -120,6 +120,6 @@ export default ({ getImages }) => ({
 		}
 	].map((item, i) => ({
 		...item,
-		image: getImages(`foto-${i}`, { alt: `${item.heading}.` }, false, true)
+		image: getImages(`foto-${i}`, { alt: `${item.heading}.` }, false, false)
 	}))
 });

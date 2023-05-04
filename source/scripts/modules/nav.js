@@ -1,15 +1,15 @@
-const POSITION = 281;
+const POSITION = 200;
 
 const initScrollNav = () => {
-	const nav = document.querySelector('.page-header');
+	const nav = document.querySelector('.nav');
 	if (window.pageYOffset < POSITION) {
-		nav.classList.add('page-header__fixed');
-		nav.classList.remove('page-header__hidden');
-		document.body.classList.add('page-header__fixed');
+		nav.classList.add('nav__fixed');
+		nav.classList.remove('nav__hidden');
+		document.nav.classList.add('nav__fixed');
 	} else {
-		nav.classList.remove('page-header__fixed');
-		nav.classList.add('page-header__hidden');
-		document.body.classList.remove('page-header__fixed');
+		nav.classList.remove('nav__fixed');
+		nav.classList.add('nav__hidden');
+		document.nav.classList.remove('nav__fixed');
 	}
 };
 
